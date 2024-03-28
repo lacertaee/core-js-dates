@@ -238,13 +238,14 @@ function getWeekNumberByDate(date) {
  */
 function getNextFridayThe13th(date) {
   let count = 0;
-  while (true) {
+  while (count < 12) {
     const temp = new Date(date.getFullYear(), count, 13);
     if (temp.getDay() === 5) {
       return temp;
     }
     count += 1;
   }
+  return 'no friday 13th';
 }
 
 /**
